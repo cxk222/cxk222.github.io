@@ -1343,19 +1343,29 @@ pre code {
   display: inline-block;
 }
 .site-author-image {
-  border: 1px solid #eee;
+  display: block;
+  margin: 0 auto;
+  padding: $site-author-image-padding;
   max-width: 120px;
-  padding: 2px;
+  height: $site-author-image-height;
+  border: 1px solid #eee;
+  border-radius: 60%;
+  transition: 2.5s all;
+}
+.site-author-image:hover {
+  transform: rotate(360deg);
 }
 .site-author-name {
+  margin: 0;
+  text-align: $site-author-name-align;
   color: var(--text-color);
   font-weight: 600;
-  margin: 0;
 }
 .site-description {
-  color: #999;
-  font-size: 0.8125em;
   margin-top: 0;
+  text-align: $site-description-align;
+  font-size: 0.8125em;
+  color: #999;
 }
 .links-of-author a {
   font-size: 0.8125em;
@@ -2711,21 +2721,27 @@ ul.breadcrumb li:last-child {
   }
 }
 body {
-  background: url("https://imgtu.com/i/WcS8Y9");
+  background: url("https://z3.ax1x.com/2021/07/24/WcS8Y9.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
 .content-wrap {
-  opacity: 0.5;
+  opacity: 0.9;
 }
 .sidebar {
-  opacity: 0.5;
+  opacity: 0.9;
 }
 .header-inner {
   background: rgba(255,255,255,0.5);
 }
 .popup {
   opacity: 0.5;
+}
+.post-block {
+  background: rgba(255,255,255,0.2);
+  border-radius: initial;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  padding: 40px;
 }
