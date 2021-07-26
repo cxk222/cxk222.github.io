@@ -2722,7 +2722,7 @@ ul.breadcrumb li:last-child {
   }
 }
 body {
-  background: url("https://z3.ax1x.com/2021/07/24/WcS8Y9.jpg");
+  background: url("https://z3.ax1x.com/2021/07/24/WcS3FJ.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -2738,6 +2738,7 @@ body {
   background: rgba(255,255,255,0.8);
 }
 .main-inner {
+  padding: 20px;
   background: rgba(255,255,255,0);
 }
 .content-wrap {
