@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="表单其他标签和属性表单 组成：表单标签 + 表单域 + 表单按钮 表单标签：form——负责数据提交的地址和方式 表单域：数据填入的部分  文本框和密码框 表单按钮：提交、重置、普通按钮  表单按钮 语法：  123&lt;button type&#x3D;&quot;submit  reset  button&quot;&gt;按钮上显示的文字&lt;&#x2F;button&gt;或者 &lt;input typ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="表单其他标签和属性">
+<meta property="og:url" content="http://example.com/2021/07/05/html%E5%92%8Ccss/%E8%A1%A8%E5%8D%95%E5%85%B6%E4%BB%96%E6%A0%87%E7%AD%BE%E5%92%8C%E5%B1%9E%E6%80%A7/index.html">
+<meta property="og:site_name" content="ckの博客">
+<meta property="og:description" content="表单其他标签和属性表单 组成：表单标签 + 表单域 + 表单按钮 表单标签：form——负责数据提交的地址和方式 表单域：数据填入的部分  文本框和密码框 表单按钮：提交、重置、普通按钮  表单按钮 语法：  123&lt;button type&#x3D;&quot;submit  reset  button&quot;&gt;按钮上显示的文字&lt;&#x2F;button&gt;或者 &lt;input typ">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-04T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-05T11:19:23.121Z">
+<meta property="article:author" content="chen">
+<meta property="article:tag" content="html,css">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2021/07/05/html%E5%92%8Ccss/%E8%A1%A8%E5%8D%95%E5%85%B6%E4%BB%96%E6%A0%87%E7%AD%BE%E5%92%8C%E5%B1%9E%E6%80%A7/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/07/05/html%E5%92%8Ccss/%E8%A1%A8%E5%8D%95%E5%85%B6%E4%BB%96%E6%A0%87%E7%AD%BE%E5%92%8C%E5%B1%9E%E6%80%A7/","path":"2021/07/05/html和css/表单其他标签和属性/","title":"表单其他标签和属性"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>表单其他标签和属性 | ckの博客</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="ckの博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ckの博客</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%85%B6%E4%BB%96%E6%A0%87%E7%AD%BE%E5%92%8C%E5%B1%9E%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text">表单其他标签和属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95"><span class="nav-number">1.0.1.</span> <span class="nav-text">表单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E6%8C%89%E9%92%AE"><span class="nav-number">1.0.2.</span> <span class="nav-text">表单按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#input%E7%9A%84%E5%85%B6%E4%BB%96type%E5%B1%9E%E6%80%A7%E5%80%BC"><span class="nav-number">1.0.3.</span> <span class="nav-text">input的其他type属性值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%A0%87%E7%AD%BE"><span class="nav-number">1.0.4.</span> <span class="nav-text">其他标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BFC%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%BA%94%E7%94%A8"><span class="nav-number">1.0.5.</span> <span class="nav-text">BFC概念及应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="nav-number">1.0.6.</span> <span class="nav-text">兼容性</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="chen"
+      src="https://z3.ax1x.com/2021/07/22/WDICJs.jpg">
+  <p class="site-author-name" itemprop="name">chen</p>
+  <div class="site-description" itemprop="description">努力不一定成功，经历好过虚度</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/cxk222" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;cxk222" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/05/html%E5%92%8Ccss/%E8%A1%A8%E5%8D%95%E5%85%B6%E4%BB%96%E6%A0%87%E7%AD%BE%E5%92%8C%E5%B1%9E%E6%80%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://z3.ax1x.com/2021/07/22/WDICJs.jpg">
+      <meta itemprop="name" content="chen">
+      <meta itemprop="description" content="努力不一定成功，经历好过虚度">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ckの博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          表单其他标签和属性
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-07-05 00:00:00" itemprop="dateCreated datePublished" datetime="2021-07-05T00:00:00+08:00">2021-07-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-05 19:19:23" itemprop="dateModified" datetime="2021-08-05T19:19:23+08:00">2021-08-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/html-css/" itemprop="url" rel="index"><span itemprop="name">html,css</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2021/07/05/html%E5%92%8Ccss/%E8%A1%A8%E5%8D%95%E5%85%B6%E4%BB%96%E6%A0%87%E7%AD%BE%E5%92%8C%E5%B1%9E%E6%80%A7/" class="post-meta-item leancloud_visitors" data-flag-title="表单其他标签和属性" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.6k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="表单其他标签和属性"><a href="#表单其他标签和属性" class="headerlink" title="表单其他标签和属性"></a>表单其他标签和属性</h2><h4 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h4><ul>
+<li>组成：表单标签 + 表单域 + 表单按钮</li>
+<li>表单标签：form——负责数据提交的地址和方式</li>
+<li>表单域：数据填入的部分  文本框和密码框</li>
+<li>表单按钮：提交、重置、普通按钮</li>
+</ul>
+<h4 id="表单按钮"><a href="#表单按钮" class="headerlink" title="表单按钮"></a>表单按钮</h4><ul>
+<li>语法：  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;submit  reset  button&quot;</span>&gt;</span>按钮上显示的文字<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">或者 </span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit  reset  button&quot;</span>   <span class="attr">value</span>=<span class="string">&quot;按钮上显示的文字&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<span id="more"></span>
+
+<h4 id="input的其他type属性值"><a href="#input的其他type属性值" class="headerlink" title="input的其他type属性值"></a>input的其他type属性值</h4><ul>
+<li>语法：  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text/password/radio/checkbox/file/hidden&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  file是提交文件<br>  hidden是隐藏域：提交不想被用户看到的数据的时候。&lt;用value设置要提交的数据&gt;<pre><code>  &lt;input type=&quot;hidden&quot; value=&quot;提交的数据&quot;  name=&quot;名字&quot;&gt;
+</code></pre>
+</li>
+</ul>
+<h4 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h4><ul>
+<li><p>lable标签<br>  语法1：</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;id名&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">lable</span> <span class="attr">for</span>=<span class="string">&quot;对应选项的id名&quot;</span>&gt;</span>要关联的内容<span class="tag">&lt;/<span class="name">lable</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  语法2：</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">lable</span>&gt;</span><span class="tag">&lt;<span class="name">input</span>&gt;</span>要关联的内容<span class="tag">&lt;/<span class="name">lable</span>&gt;</span>  lable身上不可以有for属性</span><br></pre></td></tr></table></figure></li>
+<li><p>下拉框（下拉列表）</p>
+  <select name="">
+      <option value="值">选项的值</option>
+      <option selected>默认选中</option>
+  </select>
+
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;值&quot;</span>&gt;</span>选项的值<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">selected</span>&gt;</span>默认选中<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  注意： 提交到后端的数据默认是value的值，如果没有就提交option里面的内容<br>  selected代表默认选中该项</p>
+</li>
+</ul>
+<ul>
+<li><p>文本域</p>
+  <textarea name=""></textarea>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>表单字段集</p>
+  <fieldset>
+      <legend>描述</legend>
+      <p>这里面可以放表单</p>
+  </fieldset>
+  <br>
+
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">legend</span>&gt;</span><span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="BFC概念及应用"><a href="#BFC概念及应用" class="headerlink" title="BFC概念及应用"></a>BFC概念及应用</h4><p>概念：是块级格式化上下文，是一种规范，规定了元素的排列方式，不同的BFC里面的元素的排列是互不影响的。<br>创建BFC的情况：<br>    1.浮动<br>    2.overflow<br>    3.display: inline-block / flex<br>    4.position: fixed / absolute<br>应用：<br>    1.解决margin的粘连问题（父子）<br>        方式1：给父元素设置透明边框  transparent<br>        方式2：用padding实现（修改高度）<br>        方式3：给父元素设置overflow: hidden;<br>    【所有让父元素或者子元素触发BFC的代码，都能解决粘连】<br>    2.margin的塌陷问题（兄弟之间）<br>        在一个兄弟身上设置足够的间隔<br>    3.清除浮动<br>    4.布局 【左边固定，右边自适应 / 左中右布局】</p>
+<h4 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h4><ul>
+<li><p>概念：同一个页面在不同的浏览器、版本里面效果不统一。</p>
+<table>
+<thead>
+<tr>
+<th align="center">代表浏览器</th>
+<th align="center">浏览器内核</th>
+<th align="center">前缀</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">欧鹏</td>
+<td align="center">presto</td>
+<td align="center">-o-</td>
+</tr>
+<tr>
+<td align="center">IE</td>
+<td align="center">trident</td>
+<td align="center">-ms-</td>
+</tr>
+<tr>
+<td align="center">火狐</td>
+<td align="center">gecko</td>
+<td align="center">-moz</td>
+</tr>
+<tr>
+<td align="center">谷歌</td>
+<td align="center">webkit</td>
+<td align="center">-webkit-</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>常见的兼容性问题：</p>
+<ul>
+<li>图片3像素问题  解决方案：图片设置vertical-align或者转换为块级元素</li>
+<li>行内块元素之间默认间隔   解决方案：加浮动</li>
+<li>图片外面有链接时候在低版本浏览器里有边框  解决方案：给图片边框设置为0</li>
+<li>png24在IE6里面不是透明的    解决方案：使用png8 或者 gif</li>
+<li>表单元素垂直方面不对齐    解决方案：使用浮动 或者 vertical-align:top;</li>
+<li>鼠标移入，实现手型   解决方案：  cursor:hand; 和 cursor:pointer;</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/html-css/" rel="tag"># html,css</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/07/02/html%E5%92%8Ccss/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%B8%83%E5%B1%80/" rel="prev" title="常见的布局">
+                  <i class="fa fa-chevron-left"></i> 常见的布局
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/07/06/html%E5%92%8Ccss/html5%E6%96%B0%E5%A2%9E%E7%9A%84%E8%AF%AD%E4%B9%89%E6%A0%87%E7%AD%BE/" rel="next" title="表单其他标签和属性">
+                  表单其他标签和属性 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">chen</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"2DFidQ936Gnn5AQWvfdguG7x-9Nh9j0va","appkey":"eIh36ExltrnjYCAFXJZAXHmv","server_url":null,"security":true}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+</body>
+</html>

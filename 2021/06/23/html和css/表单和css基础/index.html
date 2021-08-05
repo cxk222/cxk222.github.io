@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="表单和css基础表单概念：在页面中负责数据采集功能的。1. 表单标签 12&lt;form  action&#x3D;&amp;#x27;设置数据提交的地址&amp;#x27; method&#x3D;&amp;#x27;数据提交的方式有get和post两个&amp;#x27;&gt;&lt;&#x2F;form&gt;   get和post的区别：    get是追加到地址栏，post是以http的post机制传输数据。    get小快不安全。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="表单和css基础">
+<meta property="og:url" content="http://example.com/2021/06/23/html%E5%92%8Ccss/%E8%A1%A8%E5%8D%95%E5%92%8Ccss%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="ckの博客">
+<meta property="og:description" content="表单和css基础表单概念：在页面中负责数据采集功能的。1. 表单标签 12&lt;form  action&#x3D;&amp;#x27;设置数据提交的地址&amp;#x27; method&#x3D;&amp;#x27;数据提交的方式有get和post两个&amp;#x27;&gt;&lt;&#x2F;form&gt;   get和post的区别：    get是追加到地址栏，post是以http的post机制传输数据。    get小快不安全。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-06-22T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-04T12:46:24.800Z">
+<meta property="article:author" content="chen">
+<meta property="article:tag" content="html,css">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2021/06/23/html%E5%92%8Ccss/%E8%A1%A8%E5%8D%95%E5%92%8Ccss%E5%9F%BA%E7%A1%80/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/06/23/html%E5%92%8Ccss/%E8%A1%A8%E5%8D%95%E5%92%8Ccss%E5%9F%BA%E7%A1%80/","path":"2021/06/23/html和css/表单和css基础/","title":"表单和css基础"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>表单和css基础 | ckの博客</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="ckの博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ckの博客</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%92%8Ccss%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">表单和css基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95"><span class="nav-number">1.0.1.</span> <span class="nav-text">表单</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%EF%BC%9A%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E8%B4%9F%E8%B4%A3%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%8A%9F%E8%83%BD%E7%9A%84%E3%80%82"><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text">概念：在页面中负责数据采集功能的。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css"><span class="nav-number">1.0.2.</span> <span class="nav-text">css</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="chen"
+      src="https://z3.ax1x.com/2021/07/22/WDICJs.jpg">
+  <p class="site-author-name" itemprop="name">chen</p>
+  <div class="site-description" itemprop="description">努力不一定成功，经历好过虚度</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/cxk222" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;cxk222" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/23/html%E5%92%8Ccss/%E8%A1%A8%E5%8D%95%E5%92%8Ccss%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://z3.ax1x.com/2021/07/22/WDICJs.jpg">
+      <meta itemprop="name" content="chen">
+      <meta itemprop="description" content="努力不一定成功，经历好过虚度">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ckの博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          表单和css基础
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-23 00:00:00" itemprop="dateCreated datePublished" datetime="2021-06-23T00:00:00+08:00">2021-06-23</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-04 20:46:24" itemprop="dateModified" datetime="2021-08-04T20:46:24+08:00">2021-08-04</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/html-css/" itemprop="url" rel="index"><span itemprop="name">html,css</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2021/06/23/html%E5%92%8Ccss/%E8%A1%A8%E5%8D%95%E5%92%8Ccss%E5%9F%BA%E7%A1%80/" class="post-meta-item leancloud_visitors" data-flag-title="表单和css基础" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.5k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="表单和css基础"><a href="#表单和css基础" class="headerlink" title="表单和css基础"></a>表单和css基础</h2><h4 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h4><h6 id="概念：在页面中负责数据采集功能的。"><a href="#概念：在页面中负责数据采集功能的。" class="headerlink" title="概念：在页面中负责数据采集功能的。"></a>概念：在页面中负责数据采集功能的。</h6><p><strong>1. 表单标签</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>  <span class="attr">action</span>=<span class="string">&#x27;设置数据提交的地址&#x27;</span> <span class="attr">method</span>=<span class="string">&#x27;数据提交的方式有get和post两个&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>get和post的区别：<br>    get是追加到地址栏，post是以http的post机制传输数据。<br>    get小快不安全。</p>
+<span id="more"></span>
+<p><strong>2. 其他标签</strong></p>
+<p>文本输入框  <input type='text'> <code>&lt;input type=&#39;text&#39;&gt;</code><br>密码输入框  <input type='password'> <code>&lt;input type=&#39;password&#39;&gt;</code><br>单选       <input type='radio'> <code>&lt;input type=&#39;radio&#39; name=&#39;同一组单选的name值要一致&#39;&gt;</code><br>复选       <input type='checkbox'> <code>&lt;input type=&#39;checkbox&#39; name=&#39;同一组复选的name值要一致&#39;&gt;</code></p>
+<p>提交按钮   <button type='submit'>按钮上的文字</button> <code>&lt;button type=&#39;submit&#39;&gt;按钮上的文字&lt;/button&gt;</code><br>重置按钮   <button type='reset'>按钮上的文字</button> <code>&lt;button type=&#39;reset&#39;&gt;按钮上的文字&lt;/button&gt;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">属性说明：</span><br><span class="line">每一个输入框都必须有name属性。</span><br><span class="line">placeholder属性是设置提示文本的</span><br></pre></td></tr></table></figure>
+<h4 id="css"><a href="#css" class="headerlink" title="css"></a>css</h4><p>概念：层叠样式表，在网页实现样式的。<br>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">选择器&#123;</span><br><span class="line">    属性：属性值;</span><br><span class="line">    属性：属性值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>css的三种引入方式</p>
+<ul>
+<li><p>内联式（行内样式）<br>&lt;元素 style=’ 属性:属性值;属性：属性值; ‘&gt;&lt;/元素&gt;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">p</span> style=&#x27;<span class="attribute">color</span>:pink;&#x27;&gt;段落文字&lt;/<span class="selector-tag">p</span>&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>内部式<br>1.在head标签里面添加一个style标签<br>2.在style里按照css基本语法写代码</p>
+<head>
+    ....
+    <style>
+        选择器{
+            属性：属性值;
+            属性：属性值;
+        }
+    </style>
+</head></li>
+<li><p>外链式</p>
+<ol>
+<li>新建一个以.css为后缀的css文件</li>
+<li>在head里添加link标签，在它的href属性里面写要引入的css文件的路径</li>
+<li>在css文件里按照css基本语法写代码</li>
+<li><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    ....</span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&#x27;stylesheet&#x27;</span> <span class="attr">href</span>=<span class="string">&#x27;要引入的css文件的路径&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>这是div的内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span>   给div的文字颜色变成红色，改变字体大小为60</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>选择器：是一种匹配模式，用于匹配想要选中的元素</p>
+<ul>
+<li><p>基础选择器</p>
+<ol>
+<li><p>选中所有元素  [通配符]<br> *{   }</p>
+</li>
+<li><p>选中所有对应的标签  【标签选择器】<br> 标签名{  }</p>
+</li>
+<li><p>选中所有有对应类名的元素   [类选择器]</p>
+<ul>
+<li>元素设置类名    <code>&lt;元素 class=&#39;类名1 类名2&#39;&gt;&lt;/元素&gt;</code></li>
+<li>使用类选择器    <code>.类名1&#123;  &#125;或者 .类名2&#123;  &#125;</code></li>
+</ul>
+</li>
+<li><p>选中指定id名的元素    [id选择器]</p>
+<ul>
+<li>元素设置id名    <code>&lt;元素 id=&#39;id名&#39;&gt;&lt;/元素&gt;</code></li>
+<li>使用id选择器    <code>#id名&#123;   &#125;</code></li>
+</ul>
+</li>
+<li><p>群组选择器<br> 选中a和b    <code>a,b&#123;  &#125;</code></p>
+<p> <strong>注意：</strong>  id名是唯一的！class是可以重复的<br> 推荐给页面的大块区域使用id命名，区域里面的元素使用class命名</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>选择器的优先级</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">!important &gt; 行内样式  &gt;  id  &gt; class  &gt; 标签 &gt;*</span><br><span class="line">  无穷        1000       100    10       1     0</span><br></pre></td></tr></table></figure>
+<p>  多个选择器，计算权重之和。大的优先。如果权重一致，后者覆盖前者。</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/html-css/" rel="tag"># html,css</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/06/20/html%E5%92%8Ccss/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" rel="prev" title="01-html常用标签">
+                  <i class="fa fa-chevron-left"></i> 01-html常用标签
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/06/24/html%E5%92%8Ccss/%E6%B5%AE%E5%8A%A8%E5%92%8C%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" rel="next" title="浮动和盒子模型">
+                  浮动和盒子模型 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">chen</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"2DFidQ936Gnn5AQWvfdguG7x-9Nh9j0va","appkey":"eIh36ExltrnjYCAFXJZAXHmv","server_url":null,"security":true}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+</body>
+</html>

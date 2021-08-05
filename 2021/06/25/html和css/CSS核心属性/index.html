@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="CSS核心属性一、文本属性 字体大小——font-size:  ; 123单位：px  像素      em  基于父级的倍数      rem 基于根目录（html）的倍数 颜色color 1颜色的英文&#x2F;#16进制值&#x2F;rgb(R,G,B)&#x2F;rgba(R,G,B,透明度) 文字粗细 1font-weight:400&#x2F;normal|700&#x2F;bold;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS核心属性">
+<meta property="og:url" content="http://example.com/2021/06/25/html%E5%92%8Ccss/CSS%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7/index.html">
+<meta property="og:site_name" content="ckの博客">
+<meta property="og:description" content="CSS核心属性一、文本属性 字体大小——font-size:  ; 123单位：px  像素      em  基于父级的倍数      rem 基于根目录（html）的倍数 颜色color 1颜色的英文&#x2F;#16进制值&#x2F;rgb(R,G,B)&#x2F;rgba(R,G,B,透明度) 文字粗细 1font-weight:400&#x2F;normal|700&#x2F;bold;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-06-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-04T12:46:26.887Z">
+<meta property="article:author" content="chen">
+<meta property="article:tag" content="css">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2021/06/25/html%E5%92%8Ccss/CSS%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/06/25/html%E5%92%8Ccss/CSS%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7/","path":"2021/06/25/html和css/CSS核心属性/","title":"CSS核心属性"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>CSS核心属性 | ckの博客</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="ckの博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ckの博客</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text">CSS核心属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="nav-number">1.0.1.</span> <span class="nav-text">一、文本属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%88%97%E8%A1%A8%E5%B1%9E%E6%80%A7"><span class="nav-number">1.0.2.</span> <span class="nav-text">二、列表属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E7%BB%A7%E6%89%BF"><span class="nav-number">1.0.3.</span> <span class="nav-text">三、继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7"><span class="nav-number">1.0.4.</span> <span class="nav-text">四、背景属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%B2%BE%E7%81%B5%E5%9B%BE"><span class="nav-number">1.0.5.</span> <span class="nav-text">五、精灵图</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="chen"
+      src="https://z3.ax1x.com/2021/07/22/WDICJs.jpg">
+  <p class="site-author-name" itemprop="name">chen</p>
+  <div class="site-description" itemprop="description">努力不一定成功，经历好过虚度</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/cxk222" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;cxk222" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/25/html%E5%92%8Ccss/CSS%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://z3.ax1x.com/2021/07/22/WDICJs.jpg">
+      <meta itemprop="name" content="chen">
+      <meta itemprop="description" content="努力不一定成功，经历好过虚度">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ckの博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CSS核心属性
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-25 00:00:00" itemprop="dateCreated datePublished" datetime="2021-06-25T00:00:00+08:00">2021-06-25</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-04 20:46:26" itemprop="dateModified" datetime="2021-08-04T20:46:26+08:00">2021-08-04</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2021/06/25/html%E5%92%8Ccss/CSS%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7/" class="post-meta-item leancloud_visitors" data-flag-title="CSS核心属性" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>862</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="CSS核心属性"><a href="#CSS核心属性" class="headerlink" title="CSS核心属性"></a>CSS核心属性</h2><h4 id="一、文本属性"><a href="#一、文本属性" class="headerlink" title="一、文本属性"></a>一、文本属性</h4><ol>
+<li>字体大小——font-size:  ; <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">单位：px  像素</span><br><span class="line">      em  基于父级的倍数</span><br><span class="line">      rem 基于根目录（html）的倍数</span><br></pre></td></tr></table></figure></li>
+<li>颜色color <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">颜色的英文/#16进制值/rgb(R,G,B)/rgba(R,G,B,透明度)</span><br></pre></td></tr></table></figure></li>
+<li>文字粗细 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">font-weight</span>:<span class="number">400</span>/normal|<span class="number">700</span>/bold;</span><br></pre></td></tr></table></figure>
+<span id="more"></span></li>
+<li>字体类型 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">font-family</span>:<span class="string">&#x27;&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
+<li>字体样式 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">font-style</span>:noraml/italic;</span><br></pre></td></tr></table></figure></li>
+<li>行高 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">line-height</span>:*px;</span><br></pre></td></tr></table></figure></li>
+<li>文字水平对齐 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">text-align</span>:center/left/right/<span class="built_in">justify</span>(两端对齐)</span><br></pre></td></tr></table></figure></li>
+<li>文本缩进 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">text-indent</span>:  行级元素不生效</span><br></pre></td></tr></table></figure></li>
+<li>修饰线 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">text-decoration</span>:<span class="built_in">underline</span>(下划线)/<span class="built_in">line-through</span>(删除线)/<span class="built_in">none</span>(用于去除链接下划线);</span><br></pre></td></tr></table></figure></li>
+<li>font复合属性<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">font</span>:font-style font-weight font-size/line-height font-family; </span><br></pre></td></tr></table></figure>
+最少要写字体大小和类型</li>
+<li>字间距<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">letter-spacing</span>:</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="二、列表属性"><a href="#二、列表属性" class="headerlink" title="二、列表属性"></a>二、列表属性</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">list-style</span>:none; 去掉序列的样式</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="三、继承"><a href="#三、继承" class="headerlink" title="三、继承"></a>三、继承</h4><p>有上下级关系的元素之间，上级元素的样式被下级拥有</p>
+<h4 id="四、背景属性"><a href="#四、背景属性" class="headerlink" title="四、背景属性"></a>四、背景属性</h4><ol>
+<li>背景颜色 background-color </li>
+<li>背景图片 background-image:url( );</li>
+<li>背景平铺 background-repeat:no-repeat/repeat/repeat-X/repeat-Y;</li>
+<li>背景起始位置 background-position:x坐标 y坐标；（居中 background-position:center center;)</li>
+<li>背景图片的固定 background-attachment：scroll(滚动）/fixed（固定）</li>
+<li>背景图片的大小 background-size：宽度 高度；</li>
+</ol>
+<h4 id="五、精灵图"><a href="#五、精灵图" class="headerlink" title="五、精灵图"></a>五、精灵图</h4><ol>
+<li>实现一个指定大小的盒子</li>
+<li>设置精灵图为背景图</li>
+<li>通过background-position来调整背景图的位置</li>
+</ol>
+<p>优缺点： 性能好，命名少，步骤繁琐，增添图标麻烦</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/css/" rel="tag"># css</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/06/24/html%E5%92%8Ccss/%E6%B5%AE%E5%8A%A8%E5%92%8C%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" rel="prev" title="浮动和盒子模型">
+                  <i class="fa fa-chevron-left"></i> 浮动和盒子模型
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/06/28/html%E5%92%8Ccss/%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7/" rel="next" title="文本溢出相关属性">
+                  文本溢出相关属性 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">chen</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"2DFidQ936Gnn5AQWvfdguG7x-9Nh9j0va","appkey":"eIh36ExltrnjYCAFXJZAXHmv","server_url":null,"security":true}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+</body>
+</html>
