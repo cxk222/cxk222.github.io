@@ -186,7 +186,7 @@
     <link href="http://example.com/2021/07/13/html%E5%92%8Ccss/2D%E3%80%813D%E8%BD%AC%E6%8D%A2/"/>
     <id>http://example.com/2021/07/13/html%E5%92%8Ccss/2D%E3%80%813D%E8%BD%AC%E6%8D%A2/</id>
     <published>2021-07-12T16:00:00.000Z</published>
-    <updated>2021-08-05T12:16:57.926Z</updated>
+    <updated>2021-08-27T13:03:42.015Z</updated>
     
     <content type="html"><![CDATA[<h4 id="变形-位移，旋转，放缩，斜切"><a href="#变形-位移，旋转，放缩，斜切" class="headerlink" title="变形 : 位移，旋转，放缩，斜切"></a>变形 : 位移，旋转，放缩，斜切</h4><ul><li>tansform<ul><li>位移:transform:translate(X,Y);</li><li>旋转:transform:rotate(* deg);</li><li>放缩:transform:scale(x,y); X代表宽度变化的倍数，Y代表高度变化的倍数</li><li>倾斜:transform:skew()</li></ul></li><li>改变元素变形的基点<br>  transform-origin: x,y;</li><li>景深【元素距离用户眼睛的距离】<br>  perspective: 0px;</li><li>转换成3D空间<br>  transform-style: preserve-3d;</li></ul><span id="more"></span><h4 id="多列布局"><a href="#多列布局" class="headerlink" title="多列布局"></a>多列布局</h4><ul><li>column-width:240px;  列宽</li><li>column-count:3;  列数</li><li>column-gap:10px;  列与列之间的间隔</li><li>column-rule:1px solid red;  列边框</li></ul><p><strong>z-index: 元素在z轴上的堆叠层次</strong></p><ul><li>z-index: 数字;</li><li>元素默认值都为0，值大的盖住值小的。</li><li>该属性要生效，必须在身上要有非静态定位才行。</li></ul><p><strong>三角形实现步骤</strong></p><ol><li>设置一个div宽高为0;</li><li>设置div四边框为透明色 transparent</li><li>设置三角形对应方向边框颜色</li></ol><p><strong>选择器：</strong><br>    a+b:相邻                选中a相邻的兄弟b【只往后看】<br>    a~b:同级兄弟            选中a后面的所有兄弟</p><p>变形顺序会影响实际效果  </p>]]></content>
     
@@ -206,10 +206,14 @@
     
     
     
-    <category term="html,css" scheme="http://example.com/categories/html-css/"/>
+    <category term="html" scheme="http://example.com/categories/html/"/>
+    
+    <category term="css" scheme="http://example.com/categories/html/css/"/>
     
     
-    <category term="html,css" scheme="http://example.com/tags/html-css/"/>
+    <category term="css" scheme="http://example.com/tags/css/"/>
+    
+    <category term="html" scheme="http://example.com/tags/html/"/>
     
   </entry>
   
